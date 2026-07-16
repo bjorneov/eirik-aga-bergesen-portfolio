@@ -114,3 +114,14 @@ if (lightbox && lightboxImage && lightboxClose && lightboxTriggers.length) {
     }
   });
 }
+
+const siteUrlLinks = document.querySelectorAll("[data-site-url]");
+
+if (siteUrlLinks.length) {
+  const pageUrl = window.location.href;
+
+  siteUrlLinks.forEach((link) => {
+    link.setAttribute("href", pageUrl);
+    link.textContent = pageUrl;
+  });
+}

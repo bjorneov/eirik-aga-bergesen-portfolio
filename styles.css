@@ -225,6 +225,10 @@ h3 {
   padding: 3rem 0;
 }
 
+.section-spotlight {
+  padding-top: 1rem;
+}
+
 .section-alt {
   background: var(--surface-alt);
   border-top: 1px solid var(--line);
@@ -233,6 +237,25 @@ h3 {
 
 .section-head {
   margin-bottom: 1.4rem;
+}
+
+.section-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.spotlight-card {
+  background: linear-gradient(145deg, #fff, #f6f2ea);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
 }
 
 .filter-row {
@@ -319,6 +342,12 @@ h3 {
   margin-top: 0;
 }
 
+.credit-line {
+  margin: 0.2rem 0 0.85rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
 .card ul {
   margin: 0.2rem 0 0.9rem;
   padding-left: 1.05rem;
@@ -372,7 +401,6 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 1rem;
-  text-decoration: none;
   color: var(--text);
   font-weight: 560;
   transition:
@@ -381,10 +409,24 @@ h3 {
     box-shadow var(--transition);
 }
 
+.doc-card h3 {
+  margin-bottom: 0.65rem;
+}
+
 .doc-card:hover {
   border-color: #bec6d2;
   transform: translateY(-3px);
   box-shadow: 0 14px 22px rgba(35, 41, 51, 0.1);
+}
+
+.doc-note {
+  margin: 0.7rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.site-url-link {
+  color: var(--brand);
 }
 
 .gallery-grid {
@@ -510,7 +552,8 @@ h3 {
 @media (max-width: 980px) {
   .hero-grid,
   .project-grid,
-  .docs-grid {
+  .docs-grid,
+  .spotlight-grid {
     grid-template-columns: 1fr;
   }
 
