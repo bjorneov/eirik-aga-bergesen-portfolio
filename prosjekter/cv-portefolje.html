@@ -33,30 +33,13 @@
           <h1>CV + portefølje</h1>
           <p class="project-lead">
             Full CV og portefølje med utvalgte arbeider, kompetanse og
-            prosjekterfaring. Velg mellom full og komprimert versjon under.
+            prosjekterfaring.
           </p>
-
-          <div class="doc-toolbar" role="group" aria-label="Velg versjon">
-            <button
-              class="doc-tab is-active"
-              type="button"
-              data-doc="../Viktigste filer/Cv_Portofolio_Eirik Aga_Bergesen.pdf"
-            >
-              CV + portefølje (full)
-            </button>
-            <button
-              class="doc-tab"
-              type="button"
-              data-doc="../Viktigste filer/Cv_Portofolio_Eirik Aga_Bergesen_Bok_komprimert (1).pdf"
-            >
-              CV + portefølje (komprimert)
-            </button>
-          </div>
 
           <div class="doc-viewer">
             <iframe
               id="doc-frame"
-              src="../Viktigste filer/Cv_Portofolio_Eirik Aga_Bergesen.pdf"
+              src="../Viktigste filer/CV_Portefolje_Eirik_Aga_Bergesen.pdf"
               title="CV og portefølje (PDF)"
               loading="lazy"
             ></iframe>
@@ -64,7 +47,7 @@
           <p class="doc-fallback">
             Vises ikke dokumentet?
             <a id="doc-fallback-link"
-              href="../Viktigste filer/Cv_Portofolio_Eirik Aga_Bergesen.pdf"
+              href="../Viktigste filer/CV_Portefolje_Eirik_Aga_Bergesen.pdf"
               target="_blank"
               rel="noopener noreferrer"
               >Åpne PDF i ny fane</a
@@ -92,20 +75,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const docTabs = document.querySelectorAll(".doc-tab");
-      const docFrame = document.getElementById("doc-frame");
-      const fallbackLink = document.getElementById("doc-fallback-link");
-
-      docTabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          const doc = tab.dataset.doc;
-          docTabs.forEach((btn) => btn.classList.toggle("is-active", btn === tab));
-          docFrame.setAttribute("src", doc);
-          fallbackLink.setAttribute("href", doc);
-        });
-      });
-    </script>
   </body>
 </html>
