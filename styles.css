@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap");
 
 :root {
   --bg: #f5f4f0;
@@ -27,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Archivo", "Helvetica Neue", "Inter", Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", "Inter", Arial, sans-serif;
   color: var(--text);
   background:
     radial-gradient(90vw 70vw at 10% -10%, #e6ebf2 0%, transparent 50%),
@@ -136,22 +136,25 @@ h1,
 h2,
 h3 {
   margin: 0 0 0.85rem;
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 650;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 450;
 }
 
 h1 {
   font-size: clamp(2rem, 5vw, 3.35rem);
+  font-weight: 300;
 }
 
 h2 {
   font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 350;
 }
 
 h3 {
   font-size: 1.16rem;
+  font-weight: 500;
 }
 
 .lead {
