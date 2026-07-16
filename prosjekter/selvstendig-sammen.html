@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Byplanlegging og boligstudier | Eirik Aga Bergesen</title>
+    <title>Selvstendig Sammen — Byplanlegging | Eirik Aga Bergesen</title>
     <meta
       name="description"
-      content="Byplanlegging og boligstudier. Planfaglige prosjekter med fokus på sosial bærekraft og klimabevisste boligstrukturer."
+      content="Selvstendig Sammen — regional utviklingsstrategi for Rissa og Indre Fosen."
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
@@ -30,56 +30,33 @@
         <div class="container">
           <a class="back-link" href="../index.html#projects">← Tilbake til prosjekter</a>
           <p class="card-tag">Byplanlegging</p>
-          <h1>Byplanlegging og boligstudier</h1>
+          <h1>Selvstendig Sammen — Rissa og Indre Fosen</h1>
           <p class="project-lead">
-            Samling av planfaglige prosjekter med fokus på sosial bærekraft,
-            stedstilhørighet og klimabevisste boligstrukturer.
+            Regional utviklingsstrategi for Rissa og Indre Fosen. Studie av
+            hvordan tettstedene Stadsbygd, Vanvikan, Leksvik, Hasselvika og
+            Fevåg kan styrke egne satsingsområder og samtidig samarbeide som
+            én region.
           </p>
           <ul>
-            <li>Byplanlegging gjennom flere studioer</li>
-            <li>Nabolagsskala og typologistudier</li>
-            <li>Robuste sosiale fellesrom</li>
+            <li>Regional planlegging og stedsutvikling</li>
+            <li>Satsingsområder på tvers av grender</li>
+            <li>Nærings- og kunnskapsutveksling</li>
           </ul>
           <p class="credit-line">
             Utarbeidet med Amund O. Jølle, Eirik A. Bergersen, Eirin O.
             Delerud og Tonje J. Tollhaug.
           </p>
 
-          <div class="doc-toolbar" role="group" aria-label="Velg dokument">
-            <button
-              class="doc-tab is-active"
-              type="button"
-              data-doc="../Bergesen Eirik Aga (10018)_Byplanlegging_1.pdf"
-            >
-              Byplanlegging 1
-            </button>
-            <button
-              class="doc-tab"
-              type="button"
-              data-doc="../Bergesen Eirik Aga (10018)_Byplanlegging_2.pdf"
-            >
-              Byplanlegging 2
-            </button>
-            <button
-              class="doc-tab"
-              type="button"
-              data-doc="../Bolig_og_bånd_HEFTE_Byplanlegging.pdf"
-            >
-              Bolig og Bånd
-            </button>
-          </div>
-
           <div class="doc-viewer">
             <iframe
-              id="doc-frame"
               src="../Bergesen Eirik Aga (10018)_Byplanlegging_1.pdf"
-              title="Byplanlegging dokument (PDF)"
+              title="Selvstendig Sammen (PDF)"
               loading="lazy"
             ></iframe>
           </div>
           <p class="doc-fallback">
             Vises ikke dokumentet?
-            <a id="doc-fallback-link"
+            <a
               href="../Bergesen Eirik Aga (10018)_Byplanlegging_1.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -108,20 +85,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const docTabs = document.querySelectorAll(".doc-tab");
-      const docFrame = document.getElementById("doc-frame");
-      const fallbackLink = document.getElementById("doc-fallback-link");
-
-      docTabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          const doc = tab.dataset.doc;
-          docTabs.forEach((btn) => btn.classList.toggle("is-active", btn === tab));
-          docFrame.setAttribute("src", doc);
-          fallbackLink.setAttribute("href", doc);
-        });
-      });
-    </script>
   </body>
 </html>
