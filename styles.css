@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap");
+
 :root {
   --bg: #f5f4f0;
   --surface: #ffffff;
@@ -25,13 +27,15 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "Archivo", "Helvetica Neue", "Inter", Arial, sans-serif;
   color: var(--text);
   background:
     radial-gradient(90vw 70vw at 10% -10%, #e6ebf2 0%, transparent 50%),
     radial-gradient(80vw 55vw at 100% 0%, #ede8de 0%, transparent 48%),
     var(--bg);
   line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -132,9 +136,10 @@ h1,
 h2,
 h3 {
   margin: 0 0 0.85rem;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 650;
 }
 
 h1 {
