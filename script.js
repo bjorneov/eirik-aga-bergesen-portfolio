@@ -24,22 +24,39 @@ if (filterButtons.length && projectCards.length) {
 const revealElements = document.querySelectorAll(".reveal");
 
 if (revealElements.length) {
+  const reveal = (element) => element.classList.add("is-visible");
+
   const observer = new IntersectionObserver(
     (entries, currentObserver) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
+          reveal(entry.target);
           currentObserver.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.15,
+      // Fire as soon as any part enters; tall masonry images can never reach a
+      // high ratio, which previously left them stuck invisible.
+      threshold: 0,
       rootMargin: "0px 0px -6% 0px",
     }
   );
 
   revealElements.forEach((element) => observer.observe(element));
+
+  // Safety net: once everything (including late-loading images) has settled,
+  // reveal anything already within the viewport that the observer missed.
+  const revealInView = () => {
+    revealElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        reveal(element);
+        observer.unobserve(element);
+      }
+    });
+  };
+  window.addEventListener("load", () => setTimeout(revealInView, 200));
 }
 
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
